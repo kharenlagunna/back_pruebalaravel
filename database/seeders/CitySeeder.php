@@ -20,14 +20,14 @@ class CitySeeder extends Seeder
                         'deleted_at' => date('Y-m-d H:i:s')
         ]);
 
-        City::create(['code' => '91263', 
-                        'description' => 'EL ENCANTO', 
+        City::create(['code' => '01', 
+                        'description' => 'Bogota', 
                         'departament_id' => 2
         ]);
             
-        City::create(['code' => '91405', 
-                        'description' => 'LA CHORRERA', 
-                        'departament_id' => 2
+        City::create(['code' => '02', 
+                        'description' => 'Rio de Janeiro', 
+                        'departament_id' => 3
         ]);
     }
 }

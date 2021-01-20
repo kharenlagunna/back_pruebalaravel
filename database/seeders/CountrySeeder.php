@@ -19,12 +19,14 @@ class CountrySeeder extends Seeder
                         'deleted_at' => date('Y-m-d H:i:s')
         ]);
 
-        Country::create(['code' => 13,
-                       'description' => ' AFGANISTAN'
+        Country::create(['code' => 2,
+                       'description' => ' Colombia'
         ]);
 
-        Country::create(['code' => 248, 
-                        'description' => ' ALAND'
+        Country::create(['code' => 3, 
+                        'description' => ' Brasil'
         ]);
+    
+       
     }
 }

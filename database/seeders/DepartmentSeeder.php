@@ -17,18 +17,18 @@ class DepartmentSeeder extends Seeder
         //
         Department::create(['code' => '1', 
                             'description' => 'N/A', 
-                            'country_id' => 44, 
+                            'country_id' => 1, 
                             'deleted_at' => date('Y-m-d H:i:s')
         ]);
 
-        Department::create(['code' => '91', 
-                            'description' => 'AMAZONAS', 
-                            'country_id' => 44
+        Department::create(['code' => '2', 
+                            'description' => 'Bogotá', 
+                            'country_id' => 2
         ]);
 
-        Department::create(['code' => '5', 
-                            'description' => 'ANTIOQUIA', 
-                            'country_id' => 44
+        Department::create(['code' => '3', 
+                            'description' => 'Rio de Janeiro', 
+                            'country_id' => 3
         ]);
     }
 }
