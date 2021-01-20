@@ -20,3 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('registro', [App\Http\Controllers\UserController::class, 'createUser']);
 Route::post('ingreso', [App\Http\Controllers\AuthController::class, 'auth']);
+Route::get('usuarios', [App\Http\Controllers\UserController::class, 'index']);
+Route::post('eliminar', [App\Http\Controllers\UserController::class, 'deleteUser']);
+Route::post('actualizar', [App\Http\Controllers\UserController::class, 'updateUser']);

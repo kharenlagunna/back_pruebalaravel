@@ -24,8 +24,17 @@ class AuthController extends Controller
                 'mensaje' => 'No autorizado'
             ],401);
         }
-       // dd($request);
+
         $usuario = $request->user();
+
+        if($usuario->status == 0){
+
+            return response()->json([
+                'mensaje' => 'Usuario Inactivo'
+            ],400);
+
+        }
+        
         $token_result = $usuario->createToken('Access Token');
         $token = $token_result->token;
 
