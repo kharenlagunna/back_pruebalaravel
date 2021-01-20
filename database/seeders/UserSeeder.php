@@ -27,7 +27,7 @@ class UserSeeder extends Seeder
                     ]);
 
                     User::create(['email'=>'user@gmail.com',
-                    'password'=> bcrypt('123'),
+                    'password'=> bcrypt('@password1'),
                     'name'=>'Liseth',
                     'last_name'=>'Laguna',
                     'phone'=>'122334',
@@ -38,7 +38,7 @@ class UserSeeder extends Seeder
                     ]);
 
                     User::create(['email'=>'user1@gmail.com',
-                    'password'=> bcrypt('123'),
+                    'password'=> bcrypt('@password2'),
                     'name'=>'Liseth',
                     'last_name'=>'Laguna',
                     'phone'=>'122334',
@@ -49,7 +49,7 @@ class UserSeeder extends Seeder
                     ]);
 
                     User::create(['email'=>'user2@gmail.com',
-                    'password'=> bcrypt('123'),
+                    'password'=> bcrypt('@password3'),
                     'name'=>'Liseth',
                     'last_name'=>'Laguna',
                     'phone'=>'122334',
