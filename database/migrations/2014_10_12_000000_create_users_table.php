@@ -14,12 +14,17 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->id(); 
+            $table->bigInteger('idroles'); // id del rol que la persona manejara dentro del sistema 
+            $table->string('email')->unique(); // Correo unico de la persona que ingresara al sistema 
+            $table->string('password'); // Contraseña de acceso de la persona que ingresara al sistema
+            $table->string('name', 100); // Nombre de la persona que ingresara al sistema
+            $table->string('last_name', 100); // Apellido de la persona que ingresara al sistema
+            $table->bigInteger('phone'); //Número de la persona que ingresara al sistema
+            $table->bigInteger('identification_number')->unique(); //Número unico que identifica a la persona que ingresasra al sistema 
+            $table->date('birth_date'); // Fecha de nacimiento de la persona que ingresara al sistema    
+            $table->bigInteger('status')->default(1); // Estado para identificar si esta habilitado el usuario  
+            $table->bigInteger('idcities'); //Id de la ciudad de la persona que ingresara al sistema
             $table->timestamps();
         });
     }
